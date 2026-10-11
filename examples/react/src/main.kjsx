@@ -1,0 +1,27 @@
+가져오기 { createRoot } 출처 "react-dom/client";
+가져오기 { 상태사용, 효과사용 } 출처 "korean-code/react";
+
+함수 앱() {
+  상수 [횟수, 횟수설정] = 상태사용(0);
+  상수 [이름, 이름설정] = 상태사용("한글");
+
+  효과사용(() => {
+    document.title = `${이름}: ${횟수}`;
+  }, [이름, 횟수]);
+
+  반환 (
+    <main>
+      <h1>korean-code React</h1>
+      <label>
+        이름
+        <input value={이름} onInput={(이벤트) => 이름설정(이벤트.currentTarget.value)} />
+      </label>
+      <button onClick={() => 횟수설정(횟수 + 1)}>클릭: {횟수}</button>
+    </main>
+  );
+}
+
+상수 루트 = document.querySelector("#root");
+만약 (루트) {
+  createRoot(루트).render(<앱 />);
+}

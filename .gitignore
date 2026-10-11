@@ -1,0 +1,56 @@
+# Ignore everything unless explicitly allowed below.
+/*
+
+# Package metadata, documentation, and build configuration.
+!/.gitignore
+!/LICENSE
+!/README.md
+!/package.json
+!/pnpm-lock.yaml
+!/tsconfig.json
+!/tsconfig.build.json
+!/eslint.config.js
+
+# Package source.
+!/src/
+/src/*
+!/src/*.ts
+
+# Tests needed to verify the package.
+!/tests/
+/tests/*
+!/tests/*.test.ts
+!/tests/package-e2e.mjs
+
+# Runnable examples; exclude dependencies and generated output.
+!/examples/
+/examples/*
+!/examples/vanilla/
+!/examples/react/
+/examples/vanilla/*
+/examples/react/*
+!/examples/vanilla/package.json
+!/examples/vanilla/pnpm-lock.yaml
+!/examples/vanilla/vite.config.js
+!/examples/vanilla/index.html
+!/examples/react/package.json
+!/examples/react/pnpm-lock.yaml
+!/examples/react/vite.config.js
+!/examples/react/index.html
+!/examples/vanilla/src/
+!/examples/react/src/
+/examples/vanilla/src/*
+/examples/react/src/*
+!/examples/vanilla/src/*.kjs
+!/examples/react/src/*.kjsx
+
+# Never include local overrides or credential files.
+**/.env
+**/.env.*
+**/.npmrc
+**/.pnpmrc
+**/*.local.*
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
